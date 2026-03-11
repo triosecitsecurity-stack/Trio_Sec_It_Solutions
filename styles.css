@@ -1,0 +1,1212 @@
+/* ============================================
+   CSS FILE - ZANS Cybersecurity Website Styles
+   ============================================
+   This file contains all styling rules for the
+   cybersecurity consulting website.
+   ============================================ */
+
+/* Lines 1-10: CSS Custom Properties (Variables) - Define reusable color and design values */
+:root {
+  /* Line 2: Primary blue color used throughout the site */
+  --blue: #0052ff;
+  
+  /* Line 3: Dark color for text and backgrounds */
+  --dark: #0d1526;
+  
+  /* Line 4: Muted gray color for secondary text */
+  --muted: #6b7180;
+  
+  /* Line 5: Light background color for the page */
+  --bg: #f4f7fb;
+  
+  /* Line 6: White color for cards and containers */
+  --card: #ffffff;
+  
+  /* Line 7: Accent color (orange/yellow) for highlights */
+  --accent: #ffb347;
+  
+  /* Line 8: Box shadow value for consistent depth effect */
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  
+  /* Line 9: Border radius value for rounded corners */
+  --radius: 18px;
+}
+
+/* Highlight helper class used by JavaScript commands */
+.highlight {
+  background: var(--accent);
+  transition: background 0.3s ease;
+}
+
+
+/* Lines 12-16: Universal Reset - Removes default browser styling */
+* {
+  /* Line 13: Makes padding and border included in element width/height calculations */
+  box-sizing: border-box;
+  
+  /* Line 14: Removes default margin from all elements */
+  margin: 0;
+  
+  /* Line 15: Removes default padding from all elements */
+  padding: 0;
+}
+
+/* Lines 18-24: Body Styling - Main page container */
+body {
+  /* Line 19: Sets font family with fallbacks (Poppins, then system fonts) */
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  
+  /* Line 20: Sets background color using CSS variable */
+  background: var(--bg);
+  
+  /* Line 21: Sets text color using CSS variable */
+  color: var(--dark);
+  
+  /* Line 22: Sets line height for better readability (1.6x font size) */
+  line-height: 1.6;
+  
+  /* Line 23: Ensures body takes at least full viewport height */
+  min-height: 100vh;
+}
+
+/* Lines 26-29: Anchor (Link) Styling */
+a {
+  /* Line 27: Links inherit color from parent element */
+  color: inherit;
+  
+  /* Line 28: Removes underline from links */
+  text-decoration: none;
+}
+
+/* Lines 31-34: Image Styling */
+img {
+  /* Line 32: Images won't exceed container width */
+  max-width: 100%;
+  
+  /* Line 33: Makes images block-level (removes inline spacing) */
+  display: block;
+}
+
+/* Lines 36-43: Header Styling - Navigation bar */
+header {
+  /* Line 37: Makes header stick to top when scrolling */
+  position: sticky;
+  
+  /* Line 38: Distance from top when sticky */
+  top: 0;
+  
+  /* Line 39: Ensures header appears above other content */
+  z-index: 10;
+  
+  /* Line 40: Creates blur effect behind header */
+  backdrop-filter: blur(10px);
+  
+  /* Line 41: Semi-transparent background color */
+  background: rgba(244, 247, 251, 0.9);
+  
+  /* Line 42: Adds shadow below header for depth */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Lines 45-53: Navigation Container */
+.nav {
+  /* Line 46: Maximum width of navigation container */
+  max-width: 1180px;
+  
+  /* Line 47: Centers container horizontally */
+  margin: 0 auto;
+  
+  /* Line 48: Adds padding inside container (vertical, horizontal) */
+  padding: 14px 20px;
+  
+  /* Line 49: Makes children display in a row (flexbox) */
+  display: flex;
+  
+  /* Line 50: Vertically centers children */
+  align-items: center;
+  
+  /* Line 51: Distributes space between children */
+  justify-content: space-between;
+  
+  /* Line 52: Gap between flex items */
+  gap: 16px;
+}
+
+/* Lines 55-62: Logo Container */
+.logo {
+  /* Line 56: Makes logo items display in a row */
+  display: flex;
+  
+  /* Line 57: Vertically centers logo items */
+  align-items: center;
+  
+  /* Line 58: Space between logo mark and text */
+  gap: 10px;
+  
+  /* Line 59: Makes logo text bold */
+  font-weight: 700;
+  
+  /* Line 60: Adds spacing between letters */
+  letter-spacing: 0.2px;
+  
+  /* Line 61: Sets logo color using CSS variable */
+  color: var(--blue);
+}
+
+/* Lines 64-74: Logo Mark (Icon) */
+.logo-mark {
+  /* Line 65: Width of logo mark */
+  width: 25px;
+  
+  /* Line 66: Height of logo mark */
+  height: 25px;
+  
+  /* Line 67: Rounds corners of logo mark */
+  border-radius: 10px;
+  
+  /* Line 68: Creates gradient background (diagonal from top-left to bottom-right) */
+  background: linear-gradient(135deg, #f2f3f5, #f6f7f8);
+  
+  /* Line 69: Uses CSS Grid for centering */
+  display: grid;
+  
+  /* Line 70: Centers content both horizontally and vertically */
+  place-items: center;
+  
+  /* Line 71: Sets text color to white */
+  color: #fff;
+  
+  /* Line 72: Makes text bold */
+  font-weight: 400;
+  
+  /* Line 73: Adds shadow using CSS variable */
+  box-shadow: var(--shadow);
+}
+
+/* additional logo sizing tweaks */
+/* increase the logo text size */
+.logo {
+    font-size: 1.5rem;      /* larger text for company name */
+}
+
+/* make the logo image larger */
+.logo-mark img {
+    width: 40px;             /* adjust to taste */
+    height: auto;
+}
+
+/* adjust the square container size */
+.logo-mark {
+    width: 40px;
+    height: 40px;
+}
+
+/* Lines 76-81: Navigation Menu */
+.menu {
+  /* Line 77: Makes menu items display in a row */
+  display: flex;
+  
+  /* Line 78: Space between menu items */
+  gap: 18px;
+  
+  /* Line 79: Makes menu text medium weight */
+  font-weight: 500;
+  
+  /* Line 80: Sets menu text color */
+  color: #1c2333;
+}
+
+/* Lines 83-87: Navigation Menu Links */
+.menu a {
+  /* Line 84: Adds padding inside links (vertical, horizontal) */
+  padding: 10px 12px;
+  
+  /* Line 85: Rounds corners of links */
+  border-radius: 10px;
+  
+  /* Line 86: Smooth transition for all properties over 0.2 seconds */
+  transition: all 0.2s ease;
+}
+
+/* Lines 89-92: Navigation Menu Links Hover State */
+.menu a:hover {
+  /* Line 90: Changes text color on hover */
+  color: var(--blue);
+  
+  /* Line 91: Adds light blue background on hover */
+  background: rgba(0, 82, 255, 0.08);
+}
+
+/* Lines 94-98: Call-to-Action Buttons Container */
+.cta {
+  /* Line 95: Makes buttons display in a row */
+  display: flex;
+  
+  /* Line 96: Vertically centers buttons */
+  align-items: center;
+  
+  /* Line 97: Space between buttons */
+  gap: 10px;
+}
+
+/* Lines 100-113: Hamburger Menu Button (Mobile) */
+.burger {
+  /* Line 101: Hidden by default (shown only on mobile) */
+  display: none;
+  
+  /* Line 102: Width of button */
+  width: 42px;
+  
+  /* Line 103: Height of button */
+  height: 42px;
+  
+  /* Line 104: Rounds corners */
+  border-radius: 12px;
+  
+  /* Line 105: Adds border with semi-transparent blue */
+  border: 1px solid rgba(0, 82, 255, 0.2);
+  
+  /* Line 106: White background */
+  background: #fff;
+  
+  /* Line 107: Blue text/icon color */
+  color: var(--blue);
+  
+  /* Line 108: Centers content vertically */
+  align-items: center;
+  
+  /* Line 109: Centers content horizontally */
+  justify-content: center;
+  
+  /* Line 110: Adds shadow */
+  box-shadow: var(--shadow);
+  
+  /* Line 111: Changes cursor to pointer on hover */
+  cursor: pointer;
+  
+  /* Line 112: Smooth transform transition */
+  transition: transform 0.15s ease;
+}
+
+/* Lines 115-117: Hamburger Button Hover State */
+.burger:hover {
+  /* Line 116: Moves button up slightly on hover */
+  transform: translateY(-1px);
+}
+
+/* Lines 119-125: Hamburger Icon Line */
+.burger span {
+  /* Line 120: Width of hamburger line */
+  width: 18px;
+  
+  /* Line 121: Height of hamburger line */
+  height: 2px;
+  
+  /* Line 122: Uses current text color for background */
+  background: currentColor;
+  
+  /* Line 123: Makes span a block element */
+  display: block;
+  
+  /* Line 124: Allows positioning of pseudo-elements */
+  position: relative;
+}
+
+/* Lines 127-136: Hamburger Icon Pseudo-elements (Top and Bottom Lines) */
+.burger span::before,
+.burger span::after {
+  /* Line 129: Required for pseudo-elements to appear */
+  content: "";
+  
+  /* Line 130: Positions pseudo-elements absolutely */
+  position: absolute;
+  
+  /* Line 131: Aligns to left edge */
+  left: 0;
+  
+  /* Line 132: Width of pseudo-element lines */
+  width: 18px;
+  
+  /* Line 133: Height of pseudo-element lines */
+  height: 2px;
+  
+  /* Line 134: Uses current text color */
+  background: currentColor;
+  
+  /* Line 135: Smooth transform transition */
+  transition: transform 0.2s ease;
+}
+
+/* Lines 138-140: Top Line of Hamburger */
+.burger span::before {
+  /* Line 139: Positions 6px above center line */
+  top: -6px;
+}
+
+/* Lines 142-144: Bottom Line of Hamburger */
+.burger span::after {
+  /* Line 143: Positions 6px below center line */
+  top: 6px;
+}
+
+/* Lines 146-148: Active Hamburger (X Shape) - Center Line */
+.burger.active span {
+  /* Line 147: Hides center line when active */
+  background: transparent;
+}
+
+/* Lines 150-152: Active Hamburger - Top Line Rotates */
+.burger.active span::before {
+  /* Line 151: Moves down and rotates 45 degrees to form X */
+  transform: translateY(6px) rotate(45deg);
+}
+
+/* Lines 154-156: Active Hamburger - Bottom Line Rotates */
+.burger.active span::after {
+  /* Line 155: Moves up and rotates -45 degrees to form X */
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Lines 158-165: Button Base Styles */
+.btn {
+  /* Line 159: Removes default button border */
+  border: none;
+  
+  /* Line 160: Changes cursor to pointer */
+  cursor: pointer;
+  
+  /* Line 161: Makes button text semi-bold */
+  font-weight: 600;
+  
+  /* Line 162: Rounds button corners */
+  border-radius: 12px;
+  
+  /* Line 163: Adds padding inside button (vertical, horizontal) */
+  padding: 12px 18px;
+  
+  /* Line 164: Smooth transitions for transform, shadow, and background */
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+/* Lines 167-171: Primary Button Style */
+.btn-primary {
+  /* Line 168: Blue gradient background */
+  background: linear-gradient(135deg, #0043d9, #0b7bff);
+  
+  /* Line 169: White text color */
+  color: #fff;
+  
+  /* Line 170: Blue shadow for depth */
+  box-shadow: 0 12px 28px rgba(0, 67, 217, 0.3);
+}
+
+/* Lines 173-177: Outline Button Style */
+.btn-outline {
+  /* Line 174: Transparent background */
+  background: transparent;
+  
+  /* Line 175: Blue text color */
+  color: var(--blue);
+  
+  /* Line 176: Blue border */
+  border: 1px solid rgba(0, 82, 255, 0.4);
+}
+
+/* Lines 179-182: Button Hover State */
+.btn:hover {
+  /* Line 180: Moves button up slightly on hover */
+  transform: translateY(-1px);
+  
+  /* Line 181: Adds shadow on hover */
+  box-shadow: var(--shadow);
+}
+
+/* Lines 184-192: Hero Section */
+.hero {
+  /* Line 185: Maximum width of hero section */
+  max-width: 1180px;
+  
+  /* Line 186: Vertical margins (top, bottom) and horizontal auto centers it */
+  margin: 40px auto 60px;
+  
+  /* Line 187: Horizontal padding */
+  padding: 0 20px;
+  
+  /* Line 188: Creates CSS Grid layout */
+  display: grid;
+  
+  /* Line 189: Two columns: left column slightly wider than right */
+  grid-template-columns: 1.1fr 0.9fr;
+  
+  /* Line 190: Gap between grid columns */
+  gap: 34px;
+  
+  /* Line 191: Vertically aligns grid items */
+  align-items: center;
+}
+
+/* Lines 194-207: Tag/Badge Style */
+.tag {
+  /* Line 195: Makes tag display inline with flex properties */
+  display: inline-flex;
+  
+  /* Line 196: Vertically centers tag content */
+  align-items: center;
+  
+  /* Line 197: Space between tag elements */
+  gap: 8px;
+  
+  /* Line 198: Padding inside tag (vertical, horizontal) */
+  padding: 10px 14px;
+  
+  /* Line 199: Light blue background */
+  background: rgba(0, 82, 255, 0.08);
+  
+  /* Line 200: Blue text color */
+  color: var(--blue);
+  
+  /* Line 201: Rounds corners */
+  border-radius: 12px;
+  
+  /* Line 202: Makes text semi-bold */
+  font-weight: 600;
+  
+  /* Line 203: Space below tag */
+  margin-bottom: 14px;
+  
+  /* Line 204: Makes text uppercase */
+  text-transform: uppercase;
+  
+  /* Line 205: Small font size */
+  font-size: 12px;
+  
+  /* Line 206: Adds letter spacing */
+  letter-spacing: 1px;
+}
+
+/* Lines 209-213: Hero Heading */
+.hero h1 {
+  /* Line 210: Responsive font size (min 32px, preferred 4vw, max 44px) */
+  font-size: clamp(32px, 4vw, 44px);
+  
+  /* Line 211: Tight line height for large heading */
+  line-height: 1.15;
+  
+  /* Line 212: Space below heading */
+  margin-bottom: 16px;
+}
+
+/* Lines 215-218: Hero Paragraph */
+.hero p {
+  /* Line 216: Muted gray text color */
+  color: var(--muted);
+  
+  /* Line 217: Space below paragraph */
+  margin-bottom: 22px;
+}
+
+/* Lines 220-225: Hero Action Buttons Container */
+.hero-actions {
+  /* Line 221: Makes buttons display in a row */
+  display: flex;
+  
+  /* Line 222: Space between buttons */
+  gap: 12px;
+  
+  /* Line 223: Allows buttons to wrap to next line if needed */
+  flex-wrap: wrap;
+  
+  /* Line 224: Space below buttons */
+  margin-bottom: 22px;
+}
+
+/* Lines 227-231: Statistics Container */
+.stats {
+  /* Line 228: Makes stats display in a row */
+  display: flex;
+  
+  /* Line 229: Space between stat cards */
+  gap: 20px;
+  
+  /* Line 230: Allows stats to wrap to next line */
+  flex-wrap: wrap;
+}
+
+/* Lines 233-239: Individual Stat Card */
+.stat {
+  /* Line 234: White background */
+  background: var(--card);
+  
+  /* Line 235: Padding inside stat card (vertical, horizontal) */
+  padding: 14px 16px;
+  
+  /* Line 236: Rounds corners */
+  border-radius: 12px;
+  
+  /* Line 237: Minimum width of stat card */
+  min-width: 120px;
+  
+  /* Line 238: Adds shadow */
+  box-shadow: var(--shadow);
+}
+
+/* Lines 241-244: Stat Number (Strong Text) */
+.stat strong {
+  /* Line 242: Makes number display as block (on its own line) */
+  display: block;
+  
+  /* Line 243: Larger font size for number */
+  font-size: 20px;
+}
+
+/* Lines 246-252: Hero Visual/Slider Container */
+.hero-visual {
+  /* Line 247: Allows absolute positioning of children */
+  position: relative;
+  
+  /* Line 248: Rounds corners */
+  border-radius: 26px;
+  
+  /* Line 249: Hides overflow (for rounded corners) */
+  overflow: hidden;
+  
+  /* Line 250: Large shadow for depth */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  
+  /* Line 251: Minimum height of slider */
+  min-height: 360px;
+}
+
+/* Lines 254-259: Hero Slider Images */
+.hero-visual img {
+  /* Line 255: Images take full width of container */
+  width: 100%;
+  
+  /* Line 256: Images take full height of container */
+  height: 100%;
+  
+  /* Line 257: Images cover container while maintaining aspect ratio */
+  object-fit: cover;
+  
+  /* Line 258: Hidden by default (only active image shows) */
+  display: none;
+}
+
+/* Lines 261-263: Active Hero Slider Image */
+.hero-visual img.active {
+  /* Line 262: Shows active image */
+  display: block;
+}
+
+/* Lines 265-275: Slider Navigation Dots Container */
+.dots {
+  /* Line 266: Positions dots absolutely within parent */
+  position: absolute;
+  
+  /* Line 267: Distance from bottom of slider */
+  bottom: 16px;
+  
+  /* Line 268: Starts at 50% from left */
+  left: 50%;
+  
+  /* Line 269: Shifts left by 50% of own width (centers horizontally) */
+  transform: translateX(-50%);
+  
+  /* Line 270: Makes dots display in a row */
+  display: flex;
+  
+  /* Line 271: Space between dots */
+  gap: 10px;
+  
+  /* Line 272: Semi-transparent dark background */
+  background: rgba(13, 21, 38, 0.4);
+  
+  /* Line 273: Padding inside dots container (vertical, horizontal) */
+  padding: 8px 12px;
+  
+  /* Line 274: Fully rounded corners (pill shape) */
+  border-radius: 999px;
+}
+
+/* Lines 277-285: Slider Dot Buttons */
+.dots button {
+  /* Line 278: Width of dot */
+  width: 10px;
+  
+  /* Line 279: Height of dot */
+  height: 10px;
+  
+  /* Line 280: Makes dots circular */
+  border-radius: 50%;
+  
+  /* Line 281: Removes default button border */
+  border: none;
+  
+  /* Line 282: Semi-transparent white background */
+  background: rgba(255, 255, 255, 0.5);
+  
+  /* Line 283: Changes cursor to pointer */
+  cursor: pointer;
+  
+  /* Line 284: Smooth transitions for transform and background */
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+/* Lines 287-290: Active Slider Dot */
+.dots button.active {
+  /* Line 288: Makes active dot 20% larger */
+  transform: scale(1.2);
+  
+  /* Line 289: Fully opaque white background */
+  background: #fff;
+}
+
+/* Lines 292-296: Section Styling */
+section {
+  /* Line 293: Maximum width of sections */
+  max-width: 1180px;
+  
+  /* Line 294: Centers sections horizontally */
+  margin: 0 auto;
+  
+  /* Line 295: Vertical and horizontal padding */
+  padding: 60px 20px;
+}
+
+/* Lines 298-304: Section Header Container */
+.section-head {
+  /* Line 299: Makes header items display in a row */
+  display: flex;
+  
+  /* Line 300: Distributes space between items */
+  justify-content: space-between;
+  
+  /* Line 301: Vertically centers items */
+  align-items: center;
+  
+  /* Line 302: Gap between items */
+  gap: 16px;
+  
+  /* Line 303: Space below section header */
+  margin-bottom: 28px;
+}
+
+/* Lines 306-308: Section Heading */
+.section-head h2 {
+  /* Line 307: Font size for section headings */
+  font-size: 28px;
+}
+
+/* Lines 310-314: Card Grid Container */
+.card-grid {
+  /* Line 311: Creates CSS Grid layout */
+  display: grid;
+  
+  /* Line 312: Responsive grid: auto-fit columns with minimum 240px width */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  
+  /* Line 313: Gap between grid items */
+  gap: 20px;
+}
+
+/* Lines 316-322: Card Styling */
+.card {
+  /* Line 317: White background */
+  background: var(--card);
+  
+  /* Line 318: Rounds corners using CSS variable */
+  border-radius: var(--radius);
+  
+  /* Line 319: Padding inside card */
+  padding: 20px;
+  
+  /* Line 320: Adds shadow using CSS variable */
+  box-shadow: var(--shadow);
+  
+  /* Line 321: Smooth transform transition */
+  transition: transform 0.2s ease;
+}
+
+/* Lines 324-326: Card Hover State */
+.card:hover {
+  /* Line 325: Moves card up slightly on hover */
+  transform: translateY(-4px);
+}
+
+/* Lines 328-337: Pill/Badge Style */
+.pill {
+  /* Line 329: Makes pill display inline-block */
+  display: inline-block;
+  
+  /* Line 330: Padding inside pill (vertical, horizontal) */
+  padding: 6px 10px;
+  
+  /* Line 331: Fully rounded corners (pill shape) */
+  border-radius: 999px;
+  
+  /* Line 332: Light blue background */
+  background: rgba(0, 82, 255, 0.08);
+  
+  /* Line 333: Blue text color */
+  color: var(--blue);
+  
+  /* Line 334: Small font size */
+  font-size: 12px;
+  
+  /* Line 335: Semi-bold font weight */
+  font-weight: 600;
+  
+  /* Line 336: Space below pill */
+  margin-bottom: 8px;
+}
+
+/* Lines 339-342: Muted Text Style */
+.muted {
+  /* Line 340: Gray text color */
+  color: var(--muted);
+  
+  /* Line 341: Smaller font size */
+  font-size: 14px;
+}
+
+/* Lines 344-349: Courses/Industries Dark Section */
+.courses {
+  /* Line 345: Dark background color */
+  background: #0d1526;
+  
+  /* Line 346: White text color */
+  color: #fff;
+  
+  /* Line 347: Rounds corners */
+  border-radius: 26px;
+  
+  /* Line 348: Large shadow for depth */
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.25);
+
+  /* Consistent inner padding (replaces inline styles in HTML) */
+  padding: 32px;
+}
+
+/* Industries (dark) section tweaks */
+.courses .pill {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.courses .section-head {
+  margin-bottom: 18px;
+}
+
+/* Lines 351-356: Course/Industry Grid */
+.course-grid {
+  /* Line 352: Creates CSS Grid layout */
+  display: grid;
+  
+  /* Line 353: Responsive grid with minimum 240px column width */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  
+  /* Line 354: Gap between grid items */
+  gap: 20px;
+  
+  /* Line 355: Space above grid */
+  margin-top: 10px;
+}
+
+/* Lines 358-363: Course/Industry Card */
+.course {
+  /* Line 359: Semi-transparent white background */
+  background: rgba(255, 255, 255, 0.05);
+  
+  /* Line 360: Semi-transparent white border */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  
+  /* Line 361: Rounds corners */
+  border-radius: 16px;
+  
+  /* Line 362: Padding inside card */
+  padding: 18px;
+}
+
+/* Lines 365-370: Partners Grid Container */
+.partners {
+  /* Line 366: Creates CSS Grid layout */
+  display: grid;
+  
+  /* Line 367: Responsive grid with minimum 140px column width */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  
+  /* Line 368: Gap between grid items */
+  gap: 18px;
+  
+  /* Line 369: Vertically centers items */
+  align-items: center;
+}
+
+/* Lines 372-382: Partner Logo Container */
+.partner {
+  /* Line 373: White background */
+  background: var(--card);
+  
+  /* Line 374: Rounds corners */
+  border-radius: 14px;
+  
+  /* Line 375: Padding inside container */
+  padding: 14px;
+  
+  /* Line 376: Uses CSS Grid for centering */
+  display: grid;
+  
+  /* Line 377: Centers content both horizontally and vertically */
+  place-items: center;
+  
+  /* Line 378: Adds shadow */
+  box-shadow: var(--shadow);
+  
+  /* Line 379: Fixed height for consistency */
+  height: 80px;
+  
+  /* Line 380: Gray text color */
+  color: var(--muted);
+  
+  /* Line 381: Semi-bold font weight */
+  font-weight: 600;
+}
+
+/* Lines 384-389: Testimonials Grid Container */
+.testimonials {
+  /* Line 385: Creates CSS Grid layout */
+  display: grid;
+  
+  /* Line 386: Responsive grid with minimum 280px column width */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  
+  /* Line 387: Gap between grid items */
+  gap: 20px;
+  
+  /* Line 388: Makes all cards same height */
+  align-items: stretch;
+}
+
+/* Lines 391-400: Testimonial Card */
+.testimonial {
+  /* Line 392: White background */
+  background: var(--card);
+  
+  /* Line 393: Rounds corners */
+  border-radius: 18px;
+  
+  /* Line 394: Padding inside card */
+  padding: 20px;
+  
+  /* Line 395: Adds shadow */
+  box-shadow: var(--shadow);
+  
+  /* Line 396: Makes card a flex container */
+  display: flex;
+  
+  /* Line 397: Stacks children vertically */
+  flex-direction: column;
+  
+  /* Line 398: Gap between flex items */
+  gap: 12px;
+  
+  /* Line 399: Allows absolute positioning of quote mark */
+  position: relative;
+}
+
+/* Lines 402-405: Quote Mark Decoration */
+.quote {
+  /* Line 403: Large font size for quote mark */
+  font-size: 22px;
+  
+  /* Line 404: Blue color for quote mark */
+  color: var(--blue);
+}
+
+/* Lines 407-416: Contact Section */
+.contact {
+  /* Line 408: Blue gradient background */
+  background: linear-gradient(135deg, #0d536f, #4fc0e2);
+  
+  /* Line 409: White text color */
+  color: #fff;
+  
+  /* Line 410: Rounds corners */
+  border-radius: 24px;
+  
+  /* Line 411: Padding inside contact section */
+  padding: 34px;
+  
+  /* Line 412: Creates CSS Grid layout */
+  display: grid;
+  
+  /* Line 413: Two columns: left slightly wider than right */
+  grid-template-columns: 1.1fr 0.9fr;
+  
+  /* Line 414: Gap between grid columns */
+  gap: 24px;
+  
+  /* Line 415: Blue shadow for depth */
+  box-shadow: 0 24px 60px rgba(0, 123, 255, 0.35);
+}
+
+/* Lines 418-425: Contact Details Container */
+.contact-details {
+  /* Line 419: Semi-transparent dark background */
+  background: rgba(13, 21, 38, 0.18);
+  
+  /* Line 420: Semi-transparent white border */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  
+  /* Line 421: Rounds corners */
+  border-radius: 18px;
+  
+  /* Line 422: Padding inside container */
+  padding: 18px;
+  
+  /* Line 423: Creates CSS Grid layout */
+  display: grid;
+  
+  /* Line 424: Gap between grid items */
+  gap: 12px;
+}
+
+/* Lines 427-432: Contact Item */
+.contact-item {
+  /* Line 428: Semi-transparent white background */
+  background: rgba(255, 255, 255, 0.08);
+  
+  /* Line 429: Semi-transparent white border */
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  
+  /* Line 430: Rounds corners */
+  border-radius: 14px;
+  
+  /* Line 431: Padding inside item (vertical, horizontal) */
+  padding: 12px 14px;
+}
+
+/* Lines 434-441: Contact Label */
+.contact-label {
+  /* Line 435: Small font size */
+  font-size: 12px;
+  
+  /* Line 436: Adds letter spacing */
+  letter-spacing: 0.8px;
+  
+  /* Line 437: Makes text uppercase */
+  text-transform: uppercase;
+  
+  /* Line 438: Semi-transparent white color */
+  color: rgba(255, 255, 255, 0.75);
+  
+  /* Line 439: Space below label */
+  margin-bottom: 4px;
+  
+  /* Line 440: Semi-bold font weight */
+  font-weight: 600;
+}
+
+/* Lines 443-446: Contact Value */
+.contact-value {
+  /* Line 444: Semi-bold font weight */
+  font-weight: 600;
+  
+  /* Line 445: White text color */
+  color: #fff;
+}
+
+/* Lines 448-453: Footer */
+footer {
+  /* Line 449: Dark background color */
+  background: #0d1526;
+  
+  /* Line 450: Light gray text color */
+  color: #d8deeb;
+  
+  /* Line 451: Space above footer */
+  margin-top: 60px;
+  
+  /* Line 452: Padding inside footer (top, horizontal, bottom) */
+  padding: 50px 20px 24px;
+}
+
+/* Lines 455-461: Footer Inner Container */
+.footer-inner {
+  /* Line 456: Maximum width of footer */
+  max-width: 1180px;
+  
+  /* Line 457: Centers footer horizontally */
+  margin: 0 auto;
+  
+  /* Line 458: Creates CSS Grid layout */
+  display: grid;
+  
+  /* Line 459: Four columns: first wider, then three equal columns */
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+  
+  /* Line 460: Gap between grid columns */
+  gap: 26px;
+}
+
+/* Lines 463-466: Footer Column Heading */
+.footer-col h4 {
+  /* Line 464: Space below heading */
+  margin-bottom: 10px;
+  
+  /* Line 465: White text color */
+  color: #fff;
+}
+
+/* Lines 468-473: Footer Column List */
+.footer-col ul {
+  /* Line 469: Removes default list bullets */
+  list-style: none;
+  
+  /* Line 470: Creates CSS Grid layout for list items */
+  display: grid;
+  
+  /* Line 471: Gap between list items */
+  gap: 8px;
+  
+  /* Line 472: Smaller font size */
+  font-size: 14px;
+}
+
+/* Lines 475-479: Social Media Icons Container */
+.socials {
+  /* Line 476: Makes icons display in a row */
+  display: flex;
+  
+  /* Line 477: Space between icons */
+  gap: 12px;
+  
+  /* Line 478: Space above icons */
+  margin-top: 12px;
+}
+
+/* Lines 481-489: Social Media Icon */
+.socials span {
+  /* Line 482: Width of icon container */
+  width: 34px;
+  
+  /* Line 483: Height of icon container */
+  height: 34px;
+  
+  /* Line 484: Rounds corners */
+  border-radius: 10px;
+  
+  /* Line 485: Uses CSS Grid for centering */
+  display: grid;
+  
+  /* Line 486: Centers content both horizontally and vertically */
+  place-items: center;
+  
+  /* Line 487: Semi-transparent white background */
+  background: rgba(255, 255, 255, 0.08);
+  
+  /* Line 488: Semi-transparent white border */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Lines 491-502: Footer Bottom Section */
+.footer-bottom {
+  /* Line 492: Maximum width */
+  max-width: 1180px;
+  
+  /* Line 493: Top margin and horizontal auto centers it */
+  margin: 26px auto 0;
+  
+  /* Line 494: Top border separator */
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  
+  /* Line 495: Padding above border */
+  padding-top: 16px;
+  
+  /* Line 496: Smaller font size */
+  font-size: 13px;
+  
+  /* Line 497: Light gray text color */
+  color: #9fb2ce;
+  
+  /* Line 498: Makes items display in a row */
+  display: flex;
+  
+  /* Line 499: Distributes space between items */
+  justify-content: space-between;
+  
+  /* Line 500: Gap between items */
+  gap: 16px;
+  
+  /* Line 501: Allows items to wrap to next line */
+  flex-wrap: wrap;
+}
+
+/* Lines 504-516: Media Query - Tablets and Smaller (max-width: 960px) */
+@media (max-width: 960px) {
+  /* Lines 505-507: Hero section becomes single column on smaller screens */
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  /* Lines 509-511: Contact section becomes single column */
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  /* Lines 513-515: Footer becomes responsive grid */
+  .footer-inner {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+
+/* Lines 518-557: Media Query - Mobile Devices (max-width: 720px) */
+@media (max-width: 720px) {
+  /* Lines 519-522: Navigation adjustments for mobile */
+  .nav {
+    padding: 12px 16px;
+    position: relative;
+  }
+
+  /* Lines 524-526: Header background adjustment */
+  header {
+    background: var(--bg);
+  }
+
+  /* Lines 528-540: Mobile menu styling - hidden by default */
+  .menu {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 60px;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--card);
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    min-width: 200px;
+  }
+
+  /* Lines 542-544: Mobile menu when open */
+  .menu.open {
+    display: flex;
+  }
+
+  /* Lines 546-549: Mobile menu links */
+  .menu a {
+    padding: 10px 12px;
+    width: 100%;
+  }
+
+  /* Lines 551-553: Hide CTA buttons on mobile */
+  .cta {
+    display: none;
+  }
+
+  /* Lines 555-557: Show hamburger button on mobile */
+  .burger {
+    display: inline-flex;
+  }
+}

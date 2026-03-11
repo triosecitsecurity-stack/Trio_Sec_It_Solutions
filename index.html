@@ -1,0 +1,528 @@
+<!-- ============================================
+     HTML FILE - ZANS Cybersecurity Website
+     ============================================
+     This file contains the complete HTML structure
+     for a cybersecurity consulting website.
+     ============================================ -->
+
+<!-- Line 1: DOCTYPE declaration - tells browser this is HTML5 -->
+<!DOCTYPE html>
+
+<!-- Line 2: Opening HTML tag with language attribute set to English -->
+<html lang="en">
+
+<!-- Line 3: Opening HEAD tag - contains metadata and links to external resources -->
+<head>
+  <!-- Line 4: Meta tag for character encoding - ensures special characters display correctly -->
+  <meta charset="UTF-8" />
+  
+  <!-- Line 5: Viewport meta tag - makes website responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Line 6: Page title - appears in browser tab and search results -->
+  <title>TrioSec | Security Consulting & Advisory</title>
+  
+  <!-- Line 7: Preconnect to Google Fonts - speeds up font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <!-- Line 8: Preconnect to Google Fonts CDN - improves performance -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Line 9: Link to Poppins font family from Google Fonts with various weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Line 10: Link to external CSS stylesheet for styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- Line 12: Opening BODY tag - contains all visible content -->
+<body>
+  <!-- Line 13: HEADER element - contains navigation and site header -->
+  <header>
+    <!-- Line 14: Navigation container div with class "nav" -->
+    <div class="nav">
+      <!-- Line 15: Logo container div -->
+      <div class="logo">
+        <!-- Line 16: Logo mark/icon as a clickable link -->
+        <a href="/" class="logo-mark">
+          <img src="WhatsApp Image 2026-03-10 at 9.24.35 AM.jpeg" alt="TrioSec logo" />
+        </a>
+        <!-- Line 17: Company name text span -->
+        <span>TrioSec</span>
+      </div>
+      
+      <!-- Line 19: Hamburger menu button for mobile navigation (hidden on desktop) -->
+      <button class="burger" aria-label="Toggle navigation">
+        <!-- Line 20: Visual line for hamburger icon -->
+        <span></span>
+      </button>
+      
+      <!-- Line 22: Navigation menu container -->
+      <nav class="menu">
+        <!-- Line 23: Home link - scrolls to home section -->
+        <a href="#home">Home</a>
+        <!-- Line 24: Services link - scrolls to services section -->
+        <a href="#services">Services</a>
+        <!-- Line 25: Approach link - scrolls to approach section -->
+        <!-- <a href="#approach">Approach</a> -->
+        <!-- Line 26: Industries link - scrolls to industries section -->
+        <a href="#industries">Industries</a>
+        <!-- Case Highlights link - scrolls to case highlights section -->
+        <!-- <a href="#testimonials">Case Highlights</a> -->
+        <!-- Line 27: Partners link - scrolls to partners section -->
+      <!--  <a href="#partners">Partners</a> -->
+        <!-- Line 28: Contact link - scrolls to contact section -->
+        <a href="#contact">Contact</a>
+      </nav>
+      
+      <!-- Line 30: Call-to-action buttons container -->
+      <!-- COMMENTED OUT - Will use later -->
+      <!--
+      <div class="cta">
+        <button class="btn btn-outline">View Services</button>
+        <button class="btn btn-primary">Request Assessment</button>
+      </div>
+      -->
+    </div>
+  </header>
+
+  <!-- Line 37: Main hero section with id "home" for navigation -->
+  <main id="home" class="hero">
+    <!-- Line 38: Opening div for hero content (left side) -->
+    <div>
+      <!-- Line 39: Tag/badge showing service category -->
+      <span class="tag">Cybersecurity Consulting & Advisory</span>
+      
+      <!-- Line 40: Main heading - primary message of the website -->
+      <h1>Protect your business with modern security, built for real-world threats.</h1>
+      
+      <!-- Line 41: Descriptive paragraph explaining company value proposition -->
+      <p>TrioSec helps organizations assess risk, strengthen defenses, and respond to incidents with a practical, engineering-led approach.</p>
+      
+      <!-- Line 42: Container for hero action buttons -->
+      <!-- COMMENTED OUT - Will use later -->
+      <!--
+      <div class="hero-actions">
+        <button class="btn btn-primary">Get a Security Review</button>
+        <button class="btn btn-outline">Explore Services</button>
+      </div>
+      -->
+      
+      <!-- Line 46: Statistics container showing company achievements -->
+      <!-- COMMENTED OUT - Will use later -->
+      <!--
+      <div class="stats">
+        <div class="stat">
+          <strong>150+</strong>
+          <span class="muted">Assessments delivered</span>
+        </div>
+        <div class="stat">
+          <strong>24/7</strong>
+          <span class="muted">Incident readiness</span>
+        </div>
+        <div class="stat">
+          <strong>10+</strong>
+          <span class="muted">Years experience</span>
+        </div>
+      </div>
+      -->
+    </div>
+
+    <!-- Line 62: Hero visual/slider container (right side) -->
+    <div class="hero-visual" aria-label="Hero slider">
+      <!-- Line 63: First slider image (active by default) - team working image -->
+      <img class="active" src="6 Ways to Have Cyber Security in Your Business.jpg" alt="Team working around laptops">
+      <!-- Line 64: Second slider image - instructor guiding student -->
+      <!-- <img src="IDORs_ What are they and how to find them.jpg" alt="Instructor guiding student"> -->
+      <!-- Line 65: Third slider image - developer coding -->
+      <!-- <img src="" alt="Developer coding"> -->
+      
+      <!-- Line 66: Slider navigation dots container -->
+      <!-- <div class="dots" aria-label="Slide selectors"> -->
+        <!-- Line 67: First dot button (active by default) -->
+        <!-- <button class="active" aria-label="Slide 1"></button> -->
+        <!-- Line 68: Second dot button -->
+        <!-- <button aria-label="Slide 2"></button> -->
+        <!-- Line 69: Third dot button -->
+        <!-- <button aria-label="Slide 3"></button> -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Line 74: Services section with id for navigation -->
+  <section id="services">
+    <!-- Line 75: Section header container -->
+    <div class="section-head">
+      <!-- Line 76: Opening div for title group -->
+      <div>
+        <!-- Line 77: Pill/badge label for section -->
+        <span class="pill">Services</span>
+        <!-- Line 78: Section heading -->
+        <h2>Security services that reduce risk and improve resilience.</h2>
+      </div>
+      <!-- Line 80: Section description with muted styling -->
+      <!-- <p class="muted">From assessment to hardening to incident response, we focus on measurable outcomes.</p> -->
+    </div>
+    
+    <!-- Line 82: Grid container for service cards -->
+    <div class="card-grid">
+      <!-- Line 83: First service card article -->
+      <article class="card">
+        <!-- Line 84: Service category pill -->
+        <span class="pill">Offensive Security</span>
+        <!-- Line 85: Service title -->
+        <h3>Penetration testing</h3>
+        <!-- Line 86: Service description -->
+        <p class="muted">Web, mobile, API, and network testing with clear findings and proof-of-exploit.</p>
+      </article>
+      
+      <!-- Line 88: Second service card article -->
+      <article class="card">
+        <!-- Line 89: Service category pill -->
+        <span class="pill">Risk & Compliance</span>
+        <!-- Line 90: Service title -->
+        <h3>Security assessment & gap analysis</h3>
+        <!-- Line 91: Service description -->
+        <p class="muted">Identify high-risk exposures, prioritize fixes, and build a practical remediation plan.</p>
+      </article>
+      
+      <!-- Line 93: Third service card article -->
+      <article class="card">
+        <!-- Line 94: Service category pill -->
+        <span class="pill">Blue Team</span>
+        <!-- Line 95: Service title -->
+        <h3>Hardening & security engineering</h3>
+        <!-- Line 96: Service description -->
+        <p class="muted">Secure configurations, IAM reviews, logging/monitoring, and secure SDLC guidance.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Line 101: Approach section with id for navigation -->
+  <!-- <section id="approach"> -->
+    <!-- Line 102: Section header container -->
+    <!-- <div class="section-head"> -->
+      <!-- Line 103: Opening div for title group -->
+      <!-- <div> -->
+        <!-- Line 104: Pill/badge label -->
+        <!-- <span class="pill">Approach</span> -->
+        <!-- Line 105: Section heading -->
+        <!-- <h2>Simple steps. Strong security.</h2>
+      </div> -->
+      <!-- Line 107: Action button in section header -->
+      <!-- COMMENTED OUT - Will use later -->
+      <!--
+      <button class="btn btn-outline">See Deliverables</button>
+      -->
+    <!-- </div> -->
+    
+    <!-- Line 109: Grid container for approach step cards -->
+    <!-- <div class="card-grid"> -->
+      <!-- Line 110: First step card -->
+      <!-- <article class="card"> -->
+        <!-- Line 111: Step number and title -->
+        <!-- <h3>1) Discover</h3> -->
+        <!-- Line 112: Step description -->
+        <!-- <p class="muted">Understand assets, data flows, identities, and key business risks.</p>
+      </article> -->
+      
+      <!-- Line 114: Second step card -->
+      <!-- <article class="card"> -->
+        <!-- Line 115: Step number and title -->
+        <!-- <h3>2) Test</h3> -->
+        <!-- Line 116: Step description -->
+        <!-- <p class="muted">Validate real attack paths with controlled testing and evidence.</p>
+      </article> -->
+      
+      <!-- Line 118: Third step card -->
+      <!-- <article class="card"> -->
+        <!-- Line 119: Step number and title -->
+        <!-- <h3>3) Fix</h3> -->
+        <!-- Line 120: Step description -->
+        <!-- <p class="muted">Prioritized remediation with secure configs, patches, and guardrails.</p>
+      </article> -->
+      
+      <!-- Line 122: Fourth step card -->
+      <!-- <article class="card"> -->
+        <!-- Line 123: Step number and title -->
+        <!-- <h3>4) Verify</h3> -->
+        <!-- Line 124: Step description -->
+        <!-- <p class="muted">Re-test findings, validate controls, and deliver documentation.</p>
+      </article> -->
+    <!-- </div>
+  </section> -->
+
+  <!-- Line 129: Industries section with id for navigation -->
+  <section id="industries">
+    <!-- Line 130: Dark background container for industries -->
+    <div class="courses">
+      <!-- Line 131: Section header with inline padding style -->
+      <div class="section-head">
+        <!-- Line 132: Opening div for title group -->
+        <div>
+          <!-- Line 133: Pill with inline white background style -->
+          <span class="pill">Industries</span>
+          <!-- Line 134: Section heading -->
+          <h2>Cybersecurity support across regulated and high-growth teams.</h2>
+        </div>
+        <!-- Line 136: Primary action button -->
+        <!-- <a class="btn btn-primary" href="#contact">Request a Scope Call</a> -->
+      </div>
+      
+      <!-- Line 138: Grid container for industry cards with inline padding -->
+      <div class="course-grid">
+        <!-- Line 139: First industry card -->
+        <div class="course">
+          <!-- Line 140: Industry title -->
+          <h3>SaaS & Startups</h3>
+          <!-- Line 141: Industry description -->
+          <p>Secure SDLC, cloud hardening, and rapid risk reduction for fast shipping teams.</p>
+        </div>
+        
+        <!-- Line 143: Second industry card -->
+        <div class="course">
+          <!-- Line 144: Industry title -->
+          <h3>Finance</h3>
+          <!-- Line 145: Industry description -->
+          <p>Controls, logging, access management, and audit-ready security programs.</p>
+        </div>
+        
+        <!-- Line 147: Third industry card -->
+        <div class="course">
+          <!-- Line 148: Industry title -->
+          <h3>Healthcare</h3>
+          <!-- Line 149: Industry description -->
+          <p>Data protection, segmentation, and incident readiness for sensitive environments.</p>
+        </div>
+        
+        <!-- Line 151: Fourth industry card -->
+        <div class="course">
+          <!-- Line 152: Industry title -->
+          <h3>Enterprise IT</h3>
+          <!-- Line 153: Industry description -->
+          <p>Network security, identity governance, and vulnerability management at scale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Line 159: Partners section with id for navigation
+  <!-- COMMENTED OUT - Will use later -->
+  <!--
+  <section id="partners">
+    <div class="section-head">
+      <div>
+        <span class="pill">Partners</span>
+        <h2>Trusted by security-conscious teams.</h2>
+      </div>
+      <p class="muted">We collaborate with organizations to improve security posture and resilience.</p>
+    </div>
+    
+    <div class="partners">
+      <div class="partner">CloudScale</div>
+      <div class="partner">DataForge</div>
+      <div class="partner">NextGen Labs</div>
+      <div class="partner">FutureWorks</div>
+      <div class="partner">BlueStack</div>
+      <div class="partner">InnovaTech</div>
+    </div>
+  </section>
+  -->
+
+  <!-- Line 177: CASE HIGHLIGHTS / Testimonials section (use highlightSection('testimonials') later) -->
+  <!-- <section id="testimonials">     ----1 -->
+    <!-- Line 178: Section header container -->
+    <!-- <div class="section-head"> -->
+      <!-- Line 179: Opening div for title group -->
+      <!-- <div> -->
+        <!-- Line 180: Pill/badge label -->
+        <!-- <span class="pill">Case Highlights</span> -->
+        <!-- Line 181: Section heading -->
+        <!-- <h2>Results delivered, risk reduced.</h2> -->
+      <!-- </div> -->
+      <!-- Line 183: Section description -->
+      <!-- <div class="muted">Examples of outcomes (anonymized).</div>
+    </div>
+     -->
+    <!-- Line 185: Grid container for testimonial cards -->
+    <!-- <div class="testimonials"> -->
+      <!-- Line 186: First testimonial card -->
+      <!-- <article class="testimonial"> -->
+        <!-- Line 187: Opening quote mark decoration -->
+        <!-- <div class="quote">"</div> -->
+        <!-- Line 188: Testimonial text -->
+        <!-- <p>Reduced critical cloud misconfigurations by 60% through IAM cleanup and secure baseline rollout.</p> -->
+        <!-- Line 189: Testimonial title/category -->
+        <!-- <strong>Cloud Security Review</strong> -->
+        <!-- Line 190: Testimonial outcome with muted styling -->
+        <!-- <span class="muted">Outcome: faster audit readiness</span> -->
+      <!-- </article> -->
+      
+      <!-- Line 192: Second testimonial card -->
+      <!-- <article class="testimonial"> -->
+        <!-- Line 193: Opening quote mark decoration -->
+      <!-- <div class="quote">"</div> -->
+        <!-- Line 194: Testimonial text -->
+        <!-- <p>Identified API authorization flaws and implemented fixes with regression tests and monitoring alerts.</p> -->
+        <!-- Line 195: Testimonial title/category -->
+        <!-- <strong>Application Pen Test</strong> -->
+        <!-- Line 196: Testimonial outcome -->
+        <!-- <span class="muted">Outcome: prevented data exposure</span> -->
+      <!-- </article> -->
+      
+      <!-- Line 198: Third testimonial card -->
+      <!-- <article class="testimonial"> -->
+        <!-- Line 199: Opening quote mark decoration -->
+        <!-- <div class="quote">"</div> -->
+        <!-- Line 200: Testimonial text -->
+        <!-- <p>Built an incident response playbook and tabletop exercise plan to improve response time and clarity.</p> -->
+        <!-- Line 201: Testimonial title/category -->
+        <!-- <strong>IR Readiness</strong> -->
+        <!-- Line 202: Testimonial outcome -->
+        <!-- <span class="muted">Outcome: improved containment time</span> -->
+      <!-- </article>
+    </div>
+  </section> -->
+
+  <!-- Line 207: Contact section with id for navigation -->
+  <section id="contact">
+    <!-- Line 208: Contact container with gradient background -->
+    <div class="contact">
+      <!-- Line 209: Opening div for contact info -->
+      <div>
+        <!-- Line 210: Pill with inline white background style -->
+        <span class="pill" style="background: rgba(255,255,255,0.18); color:#fff;">Contact</span>
+        <!-- Line 211: Contact heading with inline margin style -->
+        <h2 style="margin: 8px 0 10px;">TrioSec — consulting & incident readiness.</h2>
+        <!-- Line 212: Contact description with inline color style -->
+        <p style="color: #e6f0ff;">We don't collect messages here. Use the details below to reach the team.</p>
+        
+        <!-- Line 213: Social media icons container -->
+        <div class="socials">
+          <!-- Line 214-216: Social media placeholders (f=Facebook, in=LinkedIn, x=Twitter) -->
+          <!-- <span>f</span> -->
+           <a href="https://www.linkedin.com/in/trio-sec-34754a3b6" target="_blank" rel="noopener noreferrer"><span>𝗶𝗻</span></a>
+             <a href="https://www.instagram.com/triosec.itsecurity" target="_blank" rel="noopener noreferrer"><span>𝐈𝐆</span></a>
+          <!-- <span>ig</span> -->
+          <!-- <span>x</span> -->
+        </div>
+      </div>
+      
+      <!-- Line 219: Contact details container -->
+      <div class="contact-details" aria-label="Contact details">
+        <!-- Line 220: Phone contact item -->
+        <div class="contact-item">
+          <!-- Line 221: Contact label -->
+          <div class="contact-label">Phone</div>
+          <!-- Line 222: Contact value -->
+          <div class="contact-value">+91 96988 34366</div>
+        </div>
+        
+        <!-- Line 224: Email contact item -->
+        <div class="contact-item">
+          <!-- Line 225: Contact label -->
+          <div class="contact-label">Email</div>
+          <!-- Line 226: Contact value -->
+          <div class="contact-value">triosec.itsecurity@gmail.com</div>
+        </div>
+        
+        <!-- Line 228: Office location contact item -->
+        <div class="contact-item">
+          <!-- Line 229: Contact label -->
+          <div class="contact-label">Office</div>
+          <!-- Line 230: Contact value -->
+          <div class="contact-value">Coimbatore, India</div>
+        </div>
+        
+        <!-- Line 232: Hours contact item -->
+        <!-- <div class="contact-item"> -->
+          <!-- Line 233: Contact label -->
+          <!-- <div class="contact-label">Hours</div> -->
+          <!-- Line 234: Contact value -->
+          <!-- <div class="contact-value">Mon–Sat · 08:00 AM – 6:00 PM</div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Line 240: Footer section -->
+  <footer>
+    <!-- Line 241: Footer inner container -->
+    <div class="footer-inner">
+      <!-- Line 242: Opening div for footer main content -->
+      <div>
+        <!-- Line 243: Footer logo with inline white color style -->
+        <div class="logo" style="color:#fff;">
+          <!-- Line 244: Logo mark -->
+          <!-- <div class="logo-mark">R</div> -->
+           <a href="/" class="logo-mark">
+          <img src="WhatsApp Image 2026-03-10 at 9.24.35 AM.jpeg" alt="TrioSec logo" />
+        </a>
+          <!-- Line 245: Company name -->
+          <span>TrioSecurity</span>
+        </div>
+        <!-- Line 247: Footer description with inline muted color and margin -->
+        <p class="muted" style="color:#9fb2ce; margin-top: 10px;">Cybersecurity consulting focused on practical risk reduction, secure engineering, and incident readiness.</p>
+        
+        <!-- Line 248: Social media icons container -->
+        <div class="socials">
+          <!-- Line 249-251: Social media placeholders -->
+          <!-- <span>f</span> -->
+          <a href="https://www.linkedin.com/in/trio-sec-34754a3b6" target="_blank" rel="noopener noreferrer"><span>𝗶𝗻</span></a>
+        </div>
+      </div>
+      
+      <!-- Line 254: Footer column for Company links -->
+      <div class="footer-col">
+        <!-- Line 255: Column heading -->
+        <h4>Company</h4>
+        <!-- Line 256: Unordered list for links -->
+        <ul>
+          <!-- Line 257-259: Footer navigation links -->
+          <li><a href="#services">Services</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#industries">Industries</a></li>
+        </ul>
+      </div>
+      
+      <!-- Line 262: Footer column for Explore links -->
+      <div class="footer-col">
+        <!-- Line 263: Column heading -->
+        <h4>Explore</h4>
+        <!-- Line 264: Unordered list for links -->
+        <ul>
+          <!-- Line 265-267: Footer navigation links -->
+          <!-- <li><a href="#partners">Partners</a></li> -->
+          <!-- <li><a href="#testimonials">Case Highlights</a></li> -->
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <!-- Line 270: Footer column for Core Services links -->
+      <div class="footer-col">
+        <!-- Line 271: Column heading -->
+        <h4>Core Services</h4>
+        <!-- Line 272: Unordered list for links -->
+        <ul>
+          <!-- Line 273-275: Footer service links -->
+          <li><a href="#services">Assessment</a></li>
+          <li><a href="#services">Pen Testing</a></li>
+          <li><a href="#services">Hardening</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Line 279: Footer bottom section -->
+    <div class="footer-bottom">
+      <!-- Line 280: Copyright text -->
+      <span>© 2026 TrioSec. All rights reserved.</span>
+      <!-- Line 281: Technology credits -->
+      <span>Proactive security reduces risk.</span>
+    </div>
+  </footer>
+
+  <!-- Line 285: Link to external JavaScript file for interactivity -->
+  <script src="script.js"></script>
+</body>
+<!-- Line 287: Closing HTML tag -->
+</html>
